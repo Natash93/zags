@@ -11,6 +11,9 @@ public class ApplStatusPage extends BasePage{
     @FindBy(xpath = "//div/span[contains(text(),'Вы выбрали услугу')]")
     private WebElement chosenServiceTitle;
 
+    @FindBy(xpath = "//button[text()='Закрыть']")
+    private WebElement closeButton;
+
     public String getPageTitle() {
         return pageTitle.getText();
     }
@@ -18,4 +21,10 @@ public class ApplStatusPage extends BasePage{
     public String getChosenServiceTitle() {
         return chosenServiceTitle.getText();
     }
+    public void closeApplStatusPage(){
+        closeButton.click();
+    }
+
+
+
 }

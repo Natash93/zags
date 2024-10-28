@@ -1,5 +1,6 @@
 package by.nn.zags.pages;
 
+import by.nn.zags.model.CitizenModel;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,13 +26,14 @@ public class CitizenDataPage extends BasePage {
     @FindBy (xpath = "//button[text()='Далее']")
     private WebElement nextButton;
 
-    public void fillCitizenDataForm(String surname, String name, String middleName, String birthDate, String passport, String gender){
-        surnameInputField.sendKeys(surname);
-        nameInputField.sendKeys(name);
-        middleNameInputField.sendKeys(middleName);
-        birthDateInputField.sendKeys(birthDate);
-        passportInputField.sendKeys(passport);
-        genderInputField.sendKeys(gender);
+    public void fillCitizenDataForm(CitizenModel citizenModel){
+        surnameInputField.sendKeys(citizenModel.getSurname());
+        nameInputField.sendKeys(citizenModel.getName());
+        middleNameInputField.sendKeys(citizenModel.getMiddleName());
+        birthDateInputField.sendKeys(citizenModel.getBirthDate());
+        passportInputField.sendKeys(citizenModel.getPassport());
+        genderInputField.sendKeys(citizenModel.getGender());
+        nextButton.click();
     }
     public void goToServiceDataPage(){
         nextButton.click();

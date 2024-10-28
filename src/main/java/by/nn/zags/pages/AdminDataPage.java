@@ -1,10 +1,11 @@
 package by.nn.zags.pages;
 
+import by.nn.zags.model.AdminModel;
 import by.nn.zags.model.ApplicantModel;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ApplicantDataPage extends BasePage {
+public class AdminDataPage extends BasePage{
     @FindBy(xpath = "//label[text()='Фамилия']/following-sibling::input")
     private WebElement surnameInputField;
 
@@ -20,28 +21,19 @@ public class ApplicantDataPage extends BasePage {
     @FindBy(xpath = "//label[text()='Номер паспорта']/following-sibling::input")
     private WebElement passportInputField;
 
-    @FindBy(xpath = "//label[text()='Адрес прописки']/following-sibling::input")
-    private WebElement addressInputField;
-
-        /*@FindBy (xpath = "//div[@class='MuiDialogActions-root MuiDialogActions-spacing']/button[2]")
-    private WebElement nextButton;*/
+    @FindBy (xpath = "//label[text()='Дата рождения']/following-sibling::input")
+    private WebElement birthDateInputField;
 
     @FindBy(xpath = "//button[text()='Далее']")
     private WebElement nextButton;
 
-    public void fillApplicantDataForm(ApplicantModel applicant) {
-        surnameInputField.sendKeys(applicant.getSurname());
-        nameInputField.sendKeys(applicant.getName());
-        middleNameInputField.sendKeys(applicant.getMiddleName());
-        phoneInputField.sendKeys(applicant.getPhone());
-        passportInputField.sendKeys(applicant.getPassport());
-        addressInputField.sendKeys(applicant.getAddress());
+    public void fillAdminDataForm(AdminModel adminModel) {
+        surnameInputField.sendKeys(adminModel.getSurname());
+        nameInputField.sendKeys(adminModel.getName());
+        middleNameInputField.sendKeys(adminModel.getMiddleName());
+        phoneInputField.sendKeys(adminModel.getPhone());
+        passportInputField.sendKeys(adminModel.getPassport());
+        birthDateInputField.sendKeys(adminModel.getBirthDate());
         nextButton.click();
     }
-
-    public void goToChooseServicePage() {
-        nextButton.click();
-    }
-
-
 }

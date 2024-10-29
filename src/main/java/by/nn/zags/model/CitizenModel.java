@@ -67,4 +67,16 @@ public class CitizenModel {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
+    @Override
+    public String toString() {
+        return "CitizenModel{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", passport='" + passport + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
 }

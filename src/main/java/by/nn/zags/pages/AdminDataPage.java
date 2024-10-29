@@ -2,6 +2,7 @@ package by.nn.zags.pages;
 
 import by.nn.zags.model.AdminModel;
 import by.nn.zags.model.ApplicantModel;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -27,6 +28,7 @@ public class AdminDataPage extends BasePage{
     @FindBy(xpath = "//button[text()='Далее']")
     private WebElement nextButton;
 
+    @Step("admin fills auth form")
     public void fillAdminDataForm(AdminModel adminModel) {
         surnameInputField.sendKeys(adminModel.getSurname());
         nameInputField.sendKeys(adminModel.getName());

@@ -37,4 +37,13 @@ public class BirthServiceModel {
     public void setFatherName(String fatherName) {
         this.fatherName = fatherName;
     }
+
+    @Override
+    public String toString() {
+        return "BirthServiceModel{" +
+                "birthPlace='" + birthPlace + '\'' +
+                ", motherName='" + motherName + '\'' +
+                ", fatherName='" + fatherName + '\'' +
+                '}';
+    }
 }

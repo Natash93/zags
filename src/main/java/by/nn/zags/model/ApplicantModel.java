@@ -67,4 +67,16 @@ public class ApplicantModel {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "ApplicantModel{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", passport='" + passport + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }

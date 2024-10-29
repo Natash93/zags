@@ -67,5 +67,17 @@ public class AdminModel {
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
+
+    @Override
+    public String toString() {
+        return "AdminModel{" +
+                "surname='" + surname + '\'' +
+                ", name='" + name + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", passport='" + passport + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                '}';
+    }
 }
 

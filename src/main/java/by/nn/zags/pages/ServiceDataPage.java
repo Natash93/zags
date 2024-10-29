@@ -3,6 +3,7 @@ package by.nn.zags.pages;
 import by.nn.zags.model.BirthServiceModel;
 import by.nn.zags.model.DeathServiceModel;
 import by.nn.zags.model.MarriageServiceModel;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -46,6 +47,7 @@ public class ServiceDataPage extends BasePage {
     @FindBy(xpath = "//button[text()='Завершить']")
     private WebElement finishButton;
 
+    @Step("user fills service data form")
     public void fillBirthServiceDataForm(BirthServiceModel birthServiceModel){
         birthPlaceInputField.sendKeys(birthServiceModel.getBirthPlace());
         motherNameInputField.sendKeys(birthServiceModel.getMotherName());
@@ -72,5 +74,8 @@ public class ServiceDataPage extends BasePage {
         dateOfDeathInputField.sendKeys(deathServiceModel.getDateOfDeath());
         placeOfDeathInputField.sendKeys(deathServiceModel.getPlaceOfDeath());
         finishButton.click();
+    }
+    public boolean isFinishButtonEnabled(){
+        return finishButton.isEnabled();
     }
 }

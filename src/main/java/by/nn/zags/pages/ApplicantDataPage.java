@@ -1,6 +1,7 @@
 package by.nn.zags.pages;
 
 import by.nn.zags.model.ApplicantModel;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -29,6 +30,7 @@ public class ApplicantDataPage extends BasePage {
     @FindBy(xpath = "//button[text()='Далее']")
     private WebElement nextButton;
 
+    @Step("user fills applicant data form")
     public void fillApplicantDataForm(ApplicantModel applicant) {
         surnameInputField.sendKeys(applicant.getSurname());
         nameInputField.sendKeys(applicant.getName());

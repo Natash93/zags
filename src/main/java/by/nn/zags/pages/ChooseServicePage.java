@@ -22,9 +22,13 @@ public class ChooseServicePage extends BasePage{
     public void chooseBirthRegistrationService(){
         birthRegistrationServiceButton.click();
     }
+
+    @Step("user choosing marriage registration service")
     public void chooseMarriageRegistrationService(){
         marriageRegistrationServiceButton.click();
     }
+
+    @Step("user choosing death registration service")
     public void chooseDeathRegistrationService(){
         deathRegistrationServiceButton.click();
     }

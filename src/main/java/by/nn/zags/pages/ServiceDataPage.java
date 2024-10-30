@@ -47,7 +47,7 @@ public class ServiceDataPage extends BasePage {
     @FindBy(xpath = "//button[text()='Завершить']")
     private WebElement finishButton;
 
-    @Step("user fills service data form")
+    @Step("user fills birth service data form")
     public void fillBirthServiceDataForm(BirthServiceModel birthServiceModel){
         birthPlaceInputField.sendKeys(birthServiceModel.getBirthPlace());
         motherNameInputField.sendKeys(birthServiceModel.getMotherName());
@@ -55,6 +55,7 @@ public class ServiceDataPage extends BasePage {
         finishButton.click();
     }
 
+    @Step("user fills marriage service data form")
     public void fillMarriageServiceDataForm(MarriageServiceModel marriageServiceModel){
         registrationDateInputField.sendKeys(marriageServiceModel.getRegistrationDate());
         newSurnameInputField.sendKeys(marriageServiceModel.getNewSurname());
@@ -70,6 +71,7 @@ public class ServiceDataPage extends BasePage {
         finishButton.click();
     }*/
 
+    @Step("user fills death service data form")
     public void fillDeathServiceDataForm (DeathServiceModel deathServiceModel){
         dateOfDeathInputField.sendKeys(deathServiceModel.getDateOfDeath());
         placeOfDeathInputField.sendKeys(deathServiceModel.getPlaceOfDeath());

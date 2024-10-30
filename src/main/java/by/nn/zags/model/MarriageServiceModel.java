@@ -77,4 +77,17 @@ public class MarriageServiceModel {
     public void setSpousePassport(String spousePassport) {
         this.spousePassport = spousePassport;
     }
+
+    @Override
+    public String toString() {
+        return "MarriageServiceModel{" +
+                "registrationDate='" + registrationDate + '\'' +
+                ", newSurname='" + newSurname + '\'' +
+                ", spouseSurname='" + spouseSurname + '\'' +
+                ", spouseName='" + spouseName + '\'' +
+                ", spouseMiddleName='" + spouseMiddleName + '\'' +
+                ", spouseBirthDate='" + spouseBirthDate + '\'' +
+                ", spousePassport='" + spousePassport + '\'' +
+                '}';
+    }
 }

@@ -55,8 +55,6 @@ public class ApplicationSubmissionTest extends BaseTest {
         applStatusPage.closeApplStatusPage();
         homePage.enterAsAdmin();
         adminDataPage.fillAdminDataForm(adminModel);
-        applListPage.getLastApplicationType();
-        applListPage.getLastApplicationStatus();
 
         Assert.assertEquals(applListPage.getLastApplicationType(), "Получение свидетельства о рождении");
         Assert.assertEquals(applListPage.getLastApplicationStatus(), "На рассмотрении");
@@ -83,8 +81,6 @@ public class ApplicationSubmissionTest extends BaseTest {
         applStatusPage.closeApplStatusPage();
         homePage.enterAsAdmin();
         adminDataPage.fillAdminDataForm(adminModel);
-        applListPage.getLastApplicationType();
-        applListPage.getLastApplicationStatus();
 
         Assert.assertEquals(applListPage.getLastApplicationType(), "Получение свидетельства о браке");
         Assert.assertEquals(applListPage.getLastApplicationStatus(), "На рассмотрении");
@@ -110,8 +106,6 @@ public class ApplicationSubmissionTest extends BaseTest {
         applStatusPage.closeApplStatusPage();
         homePage.enterAsAdmin();
         adminDataPage.fillAdminDataForm(adminModel);
-        applListPage.getLastApplicationType();
-        applListPage.getLastApplicationStatus();
 
         Assert.assertEquals(applListPage.getLastApplicationType(), "Получение свидетельства о смерти");
         Assert.assertEquals(applListPage.getLastApplicationStatus(), "На рассмотрении");

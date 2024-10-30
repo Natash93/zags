@@ -27,4 +27,12 @@ public class DeathServiceModel {
     public void setPlaceOfDeath(String placeOfDeath) {
         PlaceOfDeath = placeOfDeath;
     }
+
+    @Override
+    public String toString() {
+        return "DeathServiceModel{" +
+                "DateOfDeath='" + DateOfDeath + '\'' +
+                ", PlaceOfDeath='" + PlaceOfDeath + '\'' +
+                '}';
+    }
 }

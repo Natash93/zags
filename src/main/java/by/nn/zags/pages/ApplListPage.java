@@ -18,7 +18,7 @@ public class ApplListPage extends BasePage{
     @FindBy(css = "table>.MuiTableRow-root:last-of-type :nth-child(3)")
     private WebElement lastApplicationType;
 
-    @Step("checking last application")
+    @Step("checking last application type")
     public String getLastApplicationType() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(lastApplicationType));
@@ -26,6 +26,7 @@ public class ApplListPage extends BasePage{
         return lastApplicationType.getText();
     }
 
+    @Step("checking last application status")
     public String getLastApplicationStatus() {
         return lastApplicationStatus.getText();
     }
